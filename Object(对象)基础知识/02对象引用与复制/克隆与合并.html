@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>克隆与合并</title>
+</head>
+<body>
+<script>
+    let user = {
+        name: "John",
+        age: 30,
+    };
+    let clone = {}; // 新的空对象
+    for (let key in user) {
+        clone[key] = user[key];
+    }
+    // 现在 clone 是带有相同内容的完全独立的对象
+    clone.name = "Pete"; // 改变了其中的数据
+
+    alert(user.name); // 原来的对象中的 name 属性依然是 John
+
+    let permission1 = {canView: true};
+    let permission2 = {canEdit: true};
+    // 将 permissions1 和 permissions2 中的所有属性都拷贝到 user 中
+    Object.assign(user, permission1, permission2);
+    alert(JSON.stringify(user));
+
+    // 也可以使用展开运算符进行对象的浅拷贝
+    let clone2 = {...user};
+    alert(clone2.name);
+</script>
+</body>
+</html>

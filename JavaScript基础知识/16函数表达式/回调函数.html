@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>回调函数</title>
+</head>
+<body>
+<script>
+    function ask(question, yes, no) {
+        confirm(question) ? yes() : no();
+    }
+
+    function showOk() {
+        alert("You agreed.");
+    }
+
+    function showCancel() {
+        alert("You canceled the execution.");
+    }
+    // ask("Do you agree?", showOk, showCancel);
+    // ask("Do you agree?",
+    //     function showOk() {
+    //         alert("You agreed.");
+    //     },
+    //     function showCancel() {
+    //         alert("You canceled the execution.");
+    //     }
+    // );
+
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>默认值</title>
+</head>
+<body>
+<script>
+    // 这里 "no text given" 是一个字符串，但它可以是更复杂的表达式，并且只会在缺少参数时才会被计算和分配
+    function showMessage(from, text = "no given text") {
+        alert(from + ": " + text);
+    }
+
+    showMessage("Ann");
+</script>
+</body>
+</html>

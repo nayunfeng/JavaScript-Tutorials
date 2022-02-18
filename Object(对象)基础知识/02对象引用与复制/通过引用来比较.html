@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>通过引用来比较</title>
+</head>
+<body>
+<script>
+    let a = {};
+    let b = a; // 复制引用
+
+    alert(a == b); // true
+    alert(a === b); // true
+
+    let c = {};
+    let d = {}; // 两个独立的对象
+
+    alert(c == d); // false
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>深层克隆</title>
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+<script>
+    let user = {
+        name: "John",
+        sizes: {
+            height: 182,
+            width: 50
+        }
+    };
+
+    let clone = Object.assign({}, user);
+
+    alert(user.sizes == clone.sizes); // true，同一个对象
+
+    // user 和 clone 分享同一个 sizes
+    user.sizes.width++;       // 通过其中一个改变属性值
+    alert(clone.sizes.width); // 51，能从另外一个看到变更的结果
+
+    let user2 = _.cloneDeep(user);
+    user2.sizes.height++;
+    alert(user.sizes.height);
+</script>
+</body>
+</html>

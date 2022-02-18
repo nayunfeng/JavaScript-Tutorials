@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数字型转换</title>
+</head>
+<body>
+<script>
+    // 在算术函数和表达式中，会自动进行 number 类型转换。
+    alert("6" / "2"); // 3 string 类型的值被自动转换成 number 类型后进行计算
+
+    // 显示转换
+    let str = "123";
+    console.log(typeof str);
+
+    let num = Number(str);
+    console.log(typeof num);
+
+    /*
+number 类型转换规则：
+undefined	NaN
+null	0
+true 和 false	1 and 0
+string	去掉首尾空格后的纯数字字符串中含有的数字。如果剩余字符串为空，则转换结果为 0。否则，将会从剩余字符串中“读取”数字。当类型转换出现 error 时返回 NaN。
+     */
+    console.log(Number("  123 ")); // 123
+    console.log(Number("  123z ")); // NaN
+    console.log(Number(true)); // 1
+    console.log(Number(false)); // 0
+</script>
+</body>
+</html>

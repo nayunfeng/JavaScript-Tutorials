@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>箭头函数基础知识</title>
+</head>
+<body>
+<script>
+
+    // 无参
+    let sayHi = () => alert("Hello");
+    sayHi();
+    // 一个参数
+    let double = n => n * 2;
+    alert(double(3));
+    // 多个参数
+    let sum = (a, b) => a + b;
+    alert(sum(1, 2));
+    // 动态创建一个函数
+    let age = prompt("What is your age?", "18");
+    let welcome = age < 18 ? () => alert("Hello") : () => alert("Greeting");
+    welcome();
+    // 多行箭头函数
+    let divide = (a, b) => {
+        let result = a / b;
+        return result;
+    };
+    alert(divide(1, 2));
+</script>
+</body>
+</html>

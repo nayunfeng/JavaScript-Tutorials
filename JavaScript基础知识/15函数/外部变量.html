@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>外部变量</title>
+</head>
+<body>
+<script>
+    let userName = "John";
+
+    function showMessage() {
+        let userName = "Bob";
+        let message = "Hello, " + userName;
+        alert(message);
+    }
+
+    showMessage();
+    alert(userName);
+</script>
+</body>
+</html>
